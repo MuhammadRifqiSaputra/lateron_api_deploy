@@ -218,10 +218,10 @@ const Generate = () => {
   ];
 
   return (
-    <div className="h-screen w-screen bg-white font-sans flex flex-col justify-between overflow-hidden text-[#1F384C]">
+    <div className="min-h-screen w-full bg-white font-sans flex flex-col text-[#1F384C] overflow-x-hidden">
       
       {/* NAVBAR (KINI BAGIAN KANAN DIISI UTK BUTTON NAVBAR, TENGAH KOSONG) */}
-      <nav className="w-full bg-white border-b border-gray-100 px-16 py-4 flex items-center justify-between shrink-0">
+      <nav className="w-full bg-white border-b border-gray-100 px-6 lg:px-16 py-4 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/dashboard')}>
           <img 
             src={logoLateron} 
@@ -250,17 +250,17 @@ const Generate = () => {
       </nav>
 
       {/* MAIN CONTAINER */}
-      <div className="max-w-6xl w-full mx-auto px-16 py-6 flex flex-col flex-grow justify-start overflow-hidden">
+      <div className="max-w-6xl w-full mx-auto px-6 lg:px-16 py-6 flex flex-col flex-grow">
         <div>
           <h1 className="text-[26px] font-bold text-[#1F384C] tracking-tight">Set Up Your Learning Roadmap</h1>
           <p className="text-gray-400 text-[14px] mt-1">Tell us your goals and schedule so we can create the best study plan for your language test.</p>
         </div>
 
         {/* WORKSPACE AREA */}
-        <div className="flex mt-8 gap-16 items-stretch flex-grow overflow-hidden mb-4">
+        <div className="flex flex-col lg:flex-row mt-8 gap-10 lg:gap-16 items-start flex-grow mb-4">
           
           {/* SIDEBAR NAVIGATION (KIRI) */}
-          <div className="w-1/4 flex flex-col gap-1 border-r border-gray-100 pr-8 justify-start pt-2 shrink-0">
+          <div className="w-full lg:w-1/4 flex flex-col gap-1 lg:border-r border-gray-100 lg:pr-8 justify-start pt-2 shrink-0">
             {steps.map((step) => {
               const isActive = activeStep === step.id;
               const isPast = step.id < activeStep;
@@ -284,7 +284,7 @@ const Generate = () => {
           </div>
 
           {/* COMPONENT FORM (KANAN) */}
-          <div className="w-3/4 flex flex-col justify-start pl-4 py-2 overflow-hidden">
+          <div className="w-full lg:w-3/4 flex flex-col justify-start lg:pl-4 py-2">
             
             <div className="space-y-6 flex-grow">
               {/* STEP 1: Language Test */}
@@ -535,7 +535,7 @@ const Generate = () => {
       </div>
 
       {/* FOOTER */}
-      <footer className="w-full bg-[#EDF4FF]/30 border-t border-gray-100 px-16 pt-6 pb-4 shrink-0">
+      <footer className="w-full bg-[#EDF4FF]/30 border-t border-gray-100 px-6 lg:px-16 pt-6 pb-4 shrink-0 mt-auto">
         <div className="max-w-6xl w-full mx-auto grid grid-cols-12 gap-8 items-start mb-4">
           
           <div className="col-span-5 flex flex-col gap-3">
